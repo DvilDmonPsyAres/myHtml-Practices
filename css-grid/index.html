@@ -66,7 +66,7 @@
     border: 2px solid lightgoldenrodyellow;
     background-color: lightgoldenrodyellow;
     display: grid;
-    grid-template-columns: 50% 25% 25%;
+    grid-template-columns: 50% 30% 20%;
     grid-template-areas:
     "home search profile";
     align-items: center;
@@ -75,7 +75,18 @@
 .searchbar{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 
+}
+.search{
+    border-radius: 3px;
+    width: 250px;
+    height: 25px;
+}
+#lupa{
+    width: 35px;
+    height: 30px;
+    padding-left: 5px;
 }
 .profile{
     display: flex;
@@ -97,9 +108,76 @@
 
 .leftbar{
     background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+.leftbar>h1{
+    font-size: 25px;
+    color: rgb(107, 96, 73);
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: rgb(255, 233, 204);
+    border: 1px solid wheat;
+    padding: 1px;
+    border-radius: 100px;
+    margin: 1rem;
+}
+.tags{
+    background-color: rgb(255, 233, 204);
+    border: 1.5px solid wheat;
+    border-radius: 12px;
+    font-size: 25px;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 1rem;
+}
+.tag{
+    padding: 3px;
+    border: 1px solid wheat;
+}
+.tag:hover{
+    color: bisque;
+
+    font-size: 27px;
+}
+.tag>a{
+    text-decoration: none;
+    color: rgb(139, 124, 95);
 }
 .rightbar{
     background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.minipost{
+    padding: 1rem 3px 5px 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+h2{
+    color: black;
+    font-weight: 200;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+}
+.minimage>img{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%; /* La imagen nunca será más ancha que el 100% del contenedor */
+    height: auto;
+}
+.minilink{
+    font-size: 18px;
+    font-style: italic;
+    padding: 2rem;
+    display: flex;
+    flex-flow: column wrap;
 }
 .content{
     background-color: beige;
@@ -112,8 +190,8 @@
 
 }
 .posts>photo{
-    width: 255px;
-    height: 250px;
+        max-width: 100%; /* La imagen nunca será más ancha que el 100% del contenedor */
+    height: auto;
     background-color: aqua;
 }
 .description{
@@ -155,7 +233,7 @@
     color: lightblue;
 }
 #h{
-
+    padding-left: 1rem;
     align-self: auto;
 }
 #resources{
@@ -226,29 +304,67 @@
 
             <div class="navbar">
                 <div class="home">The Real Cats Academy</div>
-                <div class="searchbar">SEARCH</div>
+                <div class="searchbar">
+                    <input type="text" class="search">
+                    <a href="#"><img src="lp.png" alt="lp" id="lupa"></a>
+                </div>
                 <div class="profile">PROFILE</div>
             </div>
 
             <div class="main2">
-                <div class="leftbar"> left bar</div>
+                <div class="leftbar">
+                    <h1>Pretty cats !</h1>
+                    <div class="tags">
+                        <div class="tag"><a href="#">Blacks</a></div>
+                        <div class="tag"><a href="#">Ragers</a></div>
+                        <div class="tag"><a href="#">Bluees</a></div>
+                        <div class="tag"><a href="#">Asians</a></div>
+                        <div class="tag"><a href="#">Michis</a></div>
+                        <div class="tag"><a href="#">Bengals</a></div>
+                    </div>
+
+                </div>
 
                 <div class="content">
                     <div class="posts">
                         <h1>The Real Cats Academy</h1>
-                        <div class="photo"><img src="cat1.png" alt="cat1"></div>
+                        <div class="photo"><img src="./images/cat1.png" alt="cat1"></div>
                         <div class="description">"In ancient times, hoomans bowed to us, the regal feline deities; we remember, always."</div>
 
-                        <div class="photo"><img src="cat2.png" alt="cat2"></div>
+                        <div class="photo"><img src="./images/cat2.png" alt="cat2"></div>
                         <div class="description">"Observe, mere mortals, the realm of feline presence. Our boundless patience for your clumsy ways is our grace."</div>
 
-                        <div class="photo"><img src="cat3.png" alt="cat3"></div>
+                        <div class="photo"><img src="./images/cat3.png" alt="cat3"></div>
                         <div class="description">"Having pondered profound thinkers and the subtle purr of knowledge, feline sagacity reigns supreme."</div>
 
                     </div>
                 </div>
 
-                <div class="rightbar">right bar</div>
+                <div class="rightbar">
+                    <h2>Famous Posts</h2>
+
+                    <div class="minipost">
+                        <div class="minimage"><img src="./images/c1.png" alt="pretty cat">
+                        </div>
+                        <div class="minilink"><a href="#">“There are two means of refuge from the miseries of life: music and cats.”</a></div>
+                    </div>
+                    <div class="minipost">
+                        <div class="minimage"><img src="./images/c2.png" alt="pretty cat">
+                        </div>
+                        <div class="minilink"><a href="#">“I’m not sure why I like cats so much. I mean, they’re really cute obviously. They are both wild and domestic at the same time.”</a></div>
+                    </div>
+                    <div class="minipost">
+                        <div class="minimage"><img src="./images/c3.png" alt="pretty cat">
+                        </div>
+                        <div class="minilink"><a href="#">“Heaven will never be Paradise unless my cats are there waiting for me.” </a></div>
+                    </div>
+                    <div class="minipost">
+                        <div class="minimage"><img src="./images/c4.png" alt="pretty cat">
+                        </div>
+                        <div class="minilink"><a href="#">“I believe cats to be spirits come to earth. A cat, I am sure, could walk on a cloud without coming through.”</a></div>
+                    </div>
+
+                </div>
             </div>
 
             <div class="footer">
@@ -266,7 +382,7 @@
 
             </div>
 
-            <div class="copyright">copyright</div>
+            <div class="copyright" style="font-style: italic;">Imotechnologics2023</div>
 
         </div>
     </body>
