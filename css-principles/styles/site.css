@@ -1,0 +1,79 @@
+.under {
+    text-decoration: underline red;
+  }
+
+  .over {
+    text-decoration: wavy overline lime;
+  }
+
+  .line {
+    text-decoration: line-through;
+  }
+
+  .plain {
+    text-decoration: none;
+  }
+
+  .underover {
+    text-decoration: dashed underline overline;
+  }
+
+  .thick {
+    text-decoration: solid underline purple 4px;
+  }
+
+  .blink {
+    text-decoration: blink;
+  }
+  .loud { text-transform: uppercase; }
+  .soft { text-transform: lowercase; }
+  .title { text-transform: capitalize; }
+
+  #aa-logo {
+    background-color: white;
+    background-image: url(https://appacademy.github.io/styleguide/assets/logo/logo-emblem-black-1000.png);
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+  }
+
+
+  /* Class selector = class name preceded by a period */
+.boxy {
+    border-radius: 4px;
+    box-shadow: 0 2px gray; /* offset-x | offset-y | color */
+    filter: blur(2px);
+    background-color: #000000;
+    opacity: 0.2; /* 100% = 1 */
+  }
+
+div abbr {
+    text-transform: uppercase;
+}
+
+
+.menu > .is-active {
+    background-color: #ffe0b2;
+}
+
+
+h1 + h2 {
+    font-style: italic;
+}
+
+
+a:hover {
+    font-family: "Roboto Condensed", sans-serif;
+    color: #4fc3f7;
+    text-decoration: none;
+    border-bottom: 2px solid #4fc3f7;
+}
+
+
+p::before {
+    background-color: lightblue;
+    border-right: 4px solid violet;
+    content: ':-) ';
+    margin-right: 4px;
+    padding-left: 4px;
+  }

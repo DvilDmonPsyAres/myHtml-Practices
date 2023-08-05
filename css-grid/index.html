@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="UTF-8">
+        <title>CSS GRID</title>
+
+        <style>
+            .main {
+                display: grid;
+  grid-template-columns:auto auto auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "a b c d e"
+    "a1 b1 c1 d1 e1"
+    "a2 b2 c2 d2 e2"
+
+}
+
+.one{
+    border: 2px solid black;
+    grid-area: a;
+    text-align: center;
+    padding: 1rem;
+}
+.two{
+    border: 2px solid black;
+    grid-area: b;
+}
+.three{
+    border: 2px solid black;
+    grid-area: c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.four{
+    border: 2px solid black;
+    grid-area: d;
+}
+.five{
+    border: 2px solid black;
+    grid-area: e;
+}
+
+.six{
+    border: 2px solid blue;
+    grid-area: a1;
+}
+.seven {
+    grid-area: a2;
+}
+
+.webpage{
+    display: grid;
+    grid-template-rows: 3rem auto 3rem 2rem;
+    grid-template-areas:
+    "navbar"
+    "main"
+    "footer"
+    "copyright";
+}
+.navbar{
+    font-size: 20px;
+    border: 2px solid lightgoldenrodyellow;
+    background-color: lightgoldenrodyellow;
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    grid-template-areas:
+    "home search profile";
+    align-items: center;
+
+}
+.searchbar{
+    display: flex;
+    justify-content: flex-end;
+
+}
+.profile{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+}
+.home{
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.main2{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas:
+    "left content right";
+    font-size: 50px;
+    text-align: center;
+}
+
+.leftbar{
+    background-color: aliceblue;
+}
+.rightbar{
+    background-color: aliceblue;
+}
+.content{
+    background-color: beige;
+    display: grid;
+}
+
+.posts{
+    font-size: 15px;
+    padding: 1.5rem 1rem 0 1rem;
+
+}
+.posts>photo{
+    width: 255px;
+    height: 250px;
+    background-color: aqua;
+}
+.description{
+    font-style: italic;
+    font-size: 18px;
+    padding: 1rem 3rem 2rem 3rem;
+    margin: 1rem 5rem 1rem 5rem;
+}
+.posts>h1{
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.footer{
+    display: grid;
+    font-size: 25px;
+    grid-template-columns: 65% 35%;
+    grid-template-areas:
+    "links logo";
+}
+.logo{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1.5rem;
+}
+.links{
+    display: flex;
+    justify-content: space-between;
+    background-color: blanchedalmond;
+    font-size: 13px;
+    align-items: center;
+}
+.links>a{
+    text-decoration: none;
+    color: rgb(142, 176, 187);
+}
+.links>a:hover{
+    font-weight: bold;
+    font-size: 15px;
+    color: lightblue;
+}
+#h{
+
+    align-self: auto;
+}
+#resources{
+    padding-right: 1rem;
+}
+.logo{
+    align-items: center;
+    background-color: rgb(251, 252, 228);
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.copyright{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(201, 255, 255);
+    align-items: center;
+}
+</style>
+    </head>
+
+    <body>
+        <!-- <div class="main">
+            <div class="one">
+                <div class="a1">1</div>
+                <div class="a2">2</div>
+                <div class="a3">3</div>
+            </div>
+
+            <div class="two">
+
+                <div class="b">4</div>
+                <div class="b">5</div>
+                <div class="b">6</div>
+
+            </div>
+
+            <div class="three">
+
+                <div class="c">7</div>
+                <div class="c">8</div>
+                <div class="c">9</div>
+
+            </div>
+            <div class="four">
+                <div class="d">FOUR</div>
+            </div>
+
+            <div class="five">
+                <div>FIVE</div>
+            </div>
+
+            <div class="six">
+
+                <div class="a1">
+                    2DO PISO A1
+                </div>
+            </div>
+            <div class="seven">
+
+                <div class="a2" style="border: 2px solid red">
+                    3er PISO A2
+                </div>
+            </div>
+
+        </div> -->
+        <!-- end of first grid -->
+        <div class="webpage">
+
+            <div class="navbar">
+                <div class="home">The Real Cats Academy</div>
+                <div class="searchbar">SEARCH</div>
+                <div class="profile">PROFILE</div>
+            </div>
+
+            <div class="main2">
+                <div class="leftbar"> left bar</div>
+
+                <div class="content">
+                    <div class="posts">
+                        <h1>The Real Cats Academy</h1>
+                        <div class="photo"><img src="cat1.png" alt="cat1"></div>
+                        <div class="description">"In ancient times, hoomans bowed to us, the regal feline deities; we remember, always."</div>
+
+                        <div class="photo"><img src="cat2.png" alt="cat2"></div>
+                        <div class="description">"Observe, mere mortals, the realm of feline presence. Our boundless patience for your clumsy ways is our grace."</div>
+
+                        <div class="photo"><img src="cat3.png" alt="cat3"></div>
+                        <div class="description">"Having pondered profound thinkers and the subtle purr of knowledge, feline sagacity reigns supreme."</div>
+
+                    </div>
+                </div>
+
+                <div class="rightbar">right bar</div>
+            </div>
+
+            <div class="footer">
+
+                <div class="links">
+                    <a href="#" id="h">home</a>
+                    <a href="#">contact</a>
+                    <a href="#">about</a>
+                    <a href="#" id="resources">resources</a>
+                </div>
+
+                <div class="logo">
+                    The Real Cats Academy
+                </div>
+
+            </div>
+
+            <div class="copyright">copyright</div>
+
+        </div>
+    </body>
+</html>

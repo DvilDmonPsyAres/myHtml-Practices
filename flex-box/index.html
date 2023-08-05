@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="UTF-8">
+        <title>Flex Box</title>
+        <style>
+.flex-container{
+    border: 3px solid black;
+    background-color: darkblue;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    padding: 1rem;
+    /*max-width: max-content; /* Ajusta el ancho máximo al contenido */
+    /*max-height: max-content;  Ajusta el alto máximo al contenido */
+
+}
+
+.set-1{
+    display: flex;
+    flex-direction: row;
+    border: 3px solid white;
+    width: auto;
+    justify-content: space-around;
+}
+.set-2{
+    display: flex;
+    flex-direction: row;
+    border: 3px solid white;
+    width: auto;
+    justify-content: space-between;
+    /* order: -1; */
+}
+.set-3{
+    display: flex;
+    flex-direction: row;
+    border: 3px solid white;
+    width: auto;
+    justify-content: space-evenly;
+}
+.box{
+    padding: 1rem;
+    border: 1px solid white;
+}
+
+.set2-1{
+    display: flex;
+    flex-direction: row;
+    border: 3px solid black;
+}
+.set2-2{
+    display: flex;
+    flex-direction: row;
+    border: 3px solid black;
+}
+.set2-3{
+    display: flex;
+    flex-direction: row;
+    border: 3px solid black;
+}
+/* body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+.flex-container2{
+    border: 2px solid black;
+    max-width: max-content;
+    background-color: aquamarine;
+}
+.box2{
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.a{
+    margin-top: 3px;
+    padding:1rem;
+    background-color: bisque;
+    border: 2px solid black;
+    max-width: max-content;
+    display: flex;
+
+}
+
+.b{
+    padding:1rem;
+    background-color: bisque;
+    border: 2px solid black;
+}
+
+.c{
+    padding:1rem;
+    background-color: bisque;
+    border: 2px solid black;
+}
+.cat{
+    border: 3px solid whitesmoke;
+    width: 400px;
+    align-self: flex-end;
+    padding: 1rem;
+}
+.a>p{
+    display: flex;
+    padding: 5rem;
+    font-size: 18px;
+    font-style: italic;
+}
+        </style>
+    </head>
+    <body>
+        <div class="flex-container">
+
+
+            <div class="set-1">
+                <div class="box b1">1</div>
+                <div class="box b2">2</div>
+                <div class="box b3">3</div>
+            </div>
+
+            <div class="set-2">
+                <div class="box b4">4</div>
+                <div class="box b5">5</div>
+                <div class="box b6">6</div>
+            </div>
+
+            <div class="set-3">
+                <div class="box b7">7</div>
+                <div class="box b8">8</div>
+                <div class="box b9">9</div>
+            </div>
+
+
+        </div>
+
+
+        <div class="flex-container2">
+
+
+            <div class="set2-1">
+                <div class="box2 b1">1</div>
+                <div class="box2 b2">2</div>
+                <div class="box2 b3">3</div>
+            </div>
+
+            <div class="set2-2">
+                <div class="box2 b4">4</div>
+                <div class="box2 b5">5</div>
+                <div class="box2 b6">6</div>
+            </div>
+
+            <div class="set2-3">
+                <div class="box2 b7">7</div>
+                <div class="box2 b8">8</div>
+                <div class="box2 b9">9</div>
+            </div>
+
+
+        </div>
+
+<div class="div3">
+    <div class="a">
+        <p>What the Science Says. Like babies, cats seem to activate our brain's cuteness response. This might be due to cats' physical characteristics, including child-like features like big eyes and small noses. Studies have shown that humans, particularly women, extend the “baby schema effect” to animals as well as babies.</p>
+        <img class="cat" src="cat.jpg" alt="precious cat playing">
+    </div>
+    <div class="b">b</div>
+    <div class="c">c</div>
+</div>
+    </body>
+</html>
